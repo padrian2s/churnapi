@@ -1,0 +1,27 @@
+Checking Docker images in applications' directories...
+ls: no such file or directory: /Users/p3700676/ness/bell/churnapi/build/docker
+   create ../ocp/churn/churn-deployment.yml
+   create ../ocp/churn/churn-mysql.yml
+   create ../ocp/registry/scc-config.yml
+   create ../ocp/monitoring/jhipster-metrics.yml
+   create ../ocp/ocp-apply.sh
+
+WARNING! OpenShift configuration generated with missing images!
+To generate the missing Docker image(s), please run:
+  ./gradlew -Pprod bootRepackage buildDocker in /Users/p3700676/ness/bell/churnapi
+
+WARNING! You will need to push your image to a registry. If you have not done so, use the following commands to tag and push the images:
+  docker push churn
+
+You can deploy all your apps by running: 
+  ..//ocp/ocp-apply.sh
+OR
+  oc apply -f ..//ocp/registry
+  oc apply -f ..//ocp/monitoring
+  oc apply -f ..//ocp/churn
+and then install the apps from OpenShift console by choosing the template created in the namespace. 
+
+Use these commands to find your application's IP addresses:
+  oc get svc churn
+  
+  
