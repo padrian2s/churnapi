@@ -28,6 +28,16 @@
     "applicationType": "gateway",
     "testFrameworks": [],
     "jhiPrefix": "jhi",
-    "enableTranslation": false
+    "enableTranslation": false,
+    "appsFolders": [
+      "churnapi"
+    ],
+    "directoryPath": "../",
+    "monitoring": "prometheus",
+    "dockerRepositoryName": "",
+    "dockerPushCommand": "docker push",
+    "openshiftNamespace": "microservices",
+    "storageType": "ephemeral",
+    "registryReplicas": 2
   }
 }
